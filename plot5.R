@@ -11,7 +11,7 @@ subpm<- subset(subPM, fips=="24510")
 sumpm<- with(subpm, tapply(Emissions, as.factor(year), sum, na.rm=TRUE))
 
 png("plot5.png")
-plot(names(sumpm), sumpm, type="l", ylab= expression("Total Emission, PM"[2.5]), 
+plot(names(sumpm), sumpm, type="o", ylab= expression("Total Emission, PM"[2.5]), 
      xlab = "Year", main ="Emissions from motor vehicle sources in Baltimore City(1999-2008)", col="red")
 points(names(sumPM), sumPM, col="blue")
 
